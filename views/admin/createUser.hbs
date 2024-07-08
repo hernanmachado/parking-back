@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Usuario</title>
+</head>
+<body>
+    <h1>Crear Usuario</h1>
+    <form action="/admin/users/create" method="post">
+        <label for="username_user">Nombre de Usuario:</label>
+        <input type="text" id="username_user" name="username_user" required>
+        <label for="password_user">Contraseña:</label>
+        <input type="password" id="password_user" name="password_user" required>
+        <label for="type">Tipo:</label>
+        <select id="type" name="type" required>
+            <option value="admin">Admin</option>
+            <option value="owner">Dueño</option>
+            <option value="assistant">Conductor Asistente</option>
+            <option value="customer">Cliente</option>
+        </select>
+        <button type="submit">Crear Usuario</button>
+    </form>
+</body>
+</html>

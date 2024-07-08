@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Usuario</title>
+</head>
+<body>
+    <h1>Editar Usuario</h1>
+    <form action="/admin/users/{{user.id}}/edit" method="post">
+        <label for="username_user">Nombre de Usuario:</label>
+        <input type="text" id="username_user" name="username_user" value="{{user.username_user}}" required>
+        <label for="type">Tipo:</label>
+        <select id="type" name="type" required>
+            <option value="admin" {{#if (eq user.type 'admin')}}selected{{/if}}>Admin</option>
+            <option value="owner" {{#if (eq user.type 'owner')}}selected{{/if}}>Dueño</option>
+            <option value="assistant" {{#if (eq user.type 'assistant')}}selected{{/if}}>Conductor Asistente</option>
+            <option value="customer" {{#if (eq user.type 'customer')}}selected{{/if}}>Cliente</option>
+        </select>
+        <button type="submit">Guardar Cambios</button>
+    </form>
+</body>
+</html>
