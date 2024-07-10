@@ -47,7 +47,8 @@ dashboard: (req, res) => {
         console.error(err);
         return res.status(500).send('Error al actualizar usuario');
       }
-      res.send('Usuario actualizado exitosamente');
+      res.redirect('/admin/users')
+      //res.send('Usuario actualizado exitosamente');
     });
   },
 
@@ -58,7 +59,8 @@ dashboard: (req, res) => {
         console.error(err);
         return res.status(500).send('Error al eliminar usuario');
       }
-      res.send('Usuario eliminado exitosamente');
+      res.redirect('admin/users')
+      //res.send('Usuario eliminado exitosamente');
     });
   }
 };
