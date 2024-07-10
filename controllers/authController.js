@@ -27,7 +27,7 @@ const authController = {
       });
     });
   },
-  // falta loguear autenticación 
+  
 };
 
 module.exports = authController;
