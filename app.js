@@ -13,7 +13,7 @@ var adminRouter = require('./routes/admin');
 
 var app = express();
 
-// view engine setup
+// esto configura el motor de vistas estaticas y el modo hbs 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
